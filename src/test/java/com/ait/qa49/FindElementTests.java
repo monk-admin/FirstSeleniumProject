@@ -20,7 +20,6 @@ public class FindElementTests {
         driver.get("https://ilcarro.web.app");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
     }
 
     @AfterMethod
@@ -69,7 +68,7 @@ public class FindElementTests {
         driver.findElement(By.cssSelector("[href='/login?url=%2Fsearch']"));
         //contains -> *
         driver.findElement(By.cssSelector("[href*='login']"));
-        //start -> ˆ
+        //start -> ^
         driver.findElement(By.cssSelector("[href^='/log']"));
         //end on -> $
         driver.findElement(By.cssSelector("[href$='search']"));
